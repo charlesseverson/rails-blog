@@ -13,6 +13,6 @@ describe Post do
   end
 
   describe :relation do
-    it { should have_many(:comments) }
+    it { should have_many(:comments).dependent(:destroy) }
   end
 end
