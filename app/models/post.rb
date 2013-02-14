@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :name, :title
+  attr_accessible :content, :name, :title, :tags_attributes
 
   validates :name, :title, :content, :presence => true
   validates :title, :uniqueness => true
