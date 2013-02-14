@@ -11,4 +11,8 @@ describe Post do
     it { should_not allow_value("blah").for(:content) }
     it { should allow_value("blah blah").for(:content) }
   end
+
+  describe :relation do
+    it { should have_many(:comments) }
+  end
 end
