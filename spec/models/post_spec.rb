@@ -14,5 +14,6 @@ describe Post do
 
   describe :relation do
     it { should have_many(:comments).dependent(:destroy) }
+    it { should have_many(:tags).dependent(:destroy) }
   end
 end
